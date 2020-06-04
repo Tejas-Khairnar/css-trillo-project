@@ -1,0 +1,29 @@
+// This partial contains layout for project
+
+.container {
+  max-width: 120rem; // if not enough space then have 100%
+  margin: 8rem auto; // center container inside body
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem;
+}
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-grey-light-2);
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 18%; // no grow, no shrink, width
+}
+
+.hotel-view {
+  background-color: #fff;
+  flex: 1; // grow to all available width
+}
