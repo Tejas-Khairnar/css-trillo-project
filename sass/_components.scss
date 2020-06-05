@@ -3,20 +3,65 @@
 // logo
 .logo {
   height: 3.25rem;
+  margin-left: 3rem;
 }
 
 // search
 .search {
+  flex: 0 0 40%; // no grow, no shrink, 40% width
+
+  // center search icon on input element
+  display: flex;
+  justify-content: center; // center along main axis (horizontally)
+  align-items: center; // center along cross axis (vertically)
+
   &__input {
+    font-family: inherit; // input element doesn't inherit automatically from parent (body)
+    font-size: inherit; // input element doesn't inherit automatically from parent (header)
+    color: inherit; // input element doesn't inherit automatically from parent (body)
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px; // high number to have rounded edges
+    width: 90%;
+    margin-right: -3.25rem; // button will move on top of input
+    transition: all 0.2s; // animation for focus
+
+    &:focus {
+      outline: none; // default outline to input
+      width: 100%; // increase width on focus
+      background-color: var(--color-grey-light-3);
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
+  }
+
+  // when input is focus change button color
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
   }
 
   &__button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px); // move down
+    }
   }
 
   // style svg icon
   &__icon {
     height: 2rem;
     width: 2rem;
+    fill: var(--color-grey-dark-3); // change svg color
   }
 }
 
