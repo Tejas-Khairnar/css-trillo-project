@@ -122,3 +122,26 @@
     font-size: 1.4rem;
   }
 }
+
+// side navigation
+.side-nav {
+  &__item {
+  }
+
+  &__link {
+  }
+
+  // style svg icon
+  &__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+}
+
+// legal text
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  text-align: center; // center span element
+  padding: 2.5rem;
+}
