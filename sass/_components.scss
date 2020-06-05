@@ -3,7 +3,7 @@
 // logo
 .logo {
   height: 3.25rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 // search
@@ -67,26 +67,58 @@
 
 // user navigation
 .user-nav {
+  align-self: stretch; // override parent's align-items and occupy full available space vertically
+
+  display: flex; // all items side by side
+  align-items: center; // center along cross axis (vertically)
+
+  // select all direct children of user-nav
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+
+    display: flex; // all items side by side
+    align-items: center; // center along cross axis (vertically)
+  }
+  & > *:hover {
+    background-color: var(--color-grey-light-2);
+  }
+
   &__icon-box {
+    position: relative; // referencefor notification
   }
 
   // style svg icon
   &__icon {
     height: 2.25rem;
     width: 2.25rem;
+    fill: var(--color-grey-dark-2); // color svg icon
   }
 
   &__notification {
-  }
+    font-size: 0.8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%; // make circle
+    background-color: var(--color-primary);
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
 
-  &__user {
+    display: flex;
+    justify-content: center; // center along main axis (horizontally)
+    align-items: center; // center along cross axis (vertically)
   }
 
   &__user-photo {
     height: 3.75rem;
     border-radius: 50%; // make circle
+    margin-right: 1rem;
   }
 
   &__user-name {
+    font-size: 1.4rem;
   }
 }
