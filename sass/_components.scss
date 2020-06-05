@@ -195,3 +195,46 @@
   text-align: center; // center span element
   padding: 2.5rem;
 }
+
+// gallery
+.gallery {
+  display: flex; // all figure side by side here
+
+  &__photo {
+    width: 100%;
+    display: block; // to remove space under images when inline
+  }
+}
+
+// hotel overview
+.overview {
+  display: flex; // all items side by side
+
+  &__heading {
+  }
+
+  &__stars {
+    // flex: 1; // grow to all available space (stretch element width)
+    margin-right: auto; // element takes only its content width, margin calc by browser
+  }
+
+  // style svg icons
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary); // color svg icon
+  }
+
+  &__location {
+  }
+
+  &__rating {
+  }
+
+  &__rating-avg {
+  }
+
+  &__rating-cnt {
+  }
+}
